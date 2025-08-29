@@ -17,14 +17,14 @@ export function BackgroundWatermark() {
 <img
         src="/dumbell.svg"
         alt="Dumbbell Icon"
-        className="absolute top-20 left-10 w-16 h-16 animate-bounce  delay-500"
+        className="absolute top-20 left-10 w-16 h-16 "
       />
 
       {/* Sağ üst */}
       <img
         src="/running.svg"
         alt="Running Icon"
-        className="absolute top-40 right-20 w-16 h-16 animate-bounce delay-1000"
+        className="absolute top-40 right-20 w-16 h-16 "
       />
 
 
@@ -32,7 +32,7 @@ export function BackgroundWatermark() {
       <img
         src="/mens.svg"
         alt="Boxing Icon"
-        className="absolute bottom-20 right-10 w-18 h-18 animate-bounce delay-300"
+        className="absolute bottom-20 right-10 w-18 h-18 "
       />
 
     </div>
