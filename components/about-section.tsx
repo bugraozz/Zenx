@@ -7,10 +7,10 @@ export function AboutSection() {
     <section id="about" className="py-20 bg-gradient-to-b from-muted/20 to-muted/40 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
-          <Badge variant="secondary" className="text-primary font-semibold px-6 py-3 bg-primary/10 border-primary/20">
+          <Badge variant="secondary" className="text-black-600 font-semibold px-6 py-3 bg-primary/10 border-primary/20">
             Hakkımızda
           </Badge>
-          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-primary bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-black-400 bg-black bg-clip-text text-transparent">
             Neden ZENX GYM?
           </h2>
           <p className="text-xl text-muted-foreground font-serif max-w-3xl mx-auto leading-relaxed">

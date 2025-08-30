@@ -6,10 +6,10 @@ export function ServicesSection() {
     <section id="services" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
-          <Badge variant="secondary" className="text-primary font-semibold px-6 py-3 bg-primary/10 border-primary/20">
+          <Badge variant="secondary" className="text-black-600 font-semibold px-6 py-3 bg-primary/10 border-primary/20">
             Hizmetlerimiz
           </Badge>
-          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-primary bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-black-400 bg-black bg-clip-text text-transparent">
             Size Özel Çözümler
           </h2>
         </div>

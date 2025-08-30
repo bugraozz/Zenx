@@ -71,14 +71,15 @@ export function HeroSection() {
                 <VisuallyHidden>
                   <DialogTitle>Tanıtım Videosu</DialogTitle>
                 </VisuallyHidden>
-                <div className="relative w-full h-0 pb-[60.25%]">
+               <div className="relative w-full">
                   <video
-                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    className="w-full h-auto max-h-[80vh] rounded-lg object-contain"
                     src="/gym_video.mp4"
                     controls
                     autoPlay
                   />
                 </div>
+
               </DialogContent>
             </Dialog>
           </motion.div>

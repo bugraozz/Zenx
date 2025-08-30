@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,10 +12,13 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="text-2xl font-bold text-black">
-            <span className="text-black">ZENX</span>
-            <span className="text-gray-600 ml-2">GYM</span>
-          </div>
+            <Image
+    src="/logo.png" // public klasörüne logo.png koyman lazım
+    alt="Zenx Gym Logo"
+    width={120}
+    height={100}
+    className="rounded-md"
+  />
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">

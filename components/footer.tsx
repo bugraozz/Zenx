@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-6">
             <Image
-              src="/images/zenx-logo.png"
+              src="/logo.png"
               alt="ZENX GYM Logo"
               width={120}
               height={40}

@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter, X } from "lucide-react"
 
@@ -8,10 +9,10 @@ export function ContactSection() {
     <section id="contact" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
-          <Badge variant="secondary" className="text-primary font-semibold px-6 py-3 bg-primary/10 border-primary/20">
+          <Badge variant="secondary" className="text-black-600 font-semibold px-6 py-3 bg-primary/10 border-primary/20">
             İletişim
           </Badge>
-          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-primary bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-black-400 bg-black bg-clip-text text-transparent">
             Bize Ulaşın
           </h2>
         </div>
@@ -61,8 +62,11 @@ export function ContactSection() {
                   size="icon"
                   variant="outline"
                   className="w-12 h-12 hover:bg-primary hover:text-primary-foreground bg-transparent border-2 hover:border-primary transition-all duration-300 hover:scale-110"
+                  asChild
                 >
-                  <Instagram className="h-6 w-6" />
+                  <a href="https://www.instagram.com/zenx.gym/" target="_blank" rel="noopener noreferrer">
+                    <Instagram className="h-6 w-6" />
+                  </a>
                 </Button>
                 <Button
                   size="icon"

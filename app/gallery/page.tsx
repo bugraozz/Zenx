@@ -6,11 +6,18 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight, X, ArrowLeft } from "lucide-react";
 
 const images = [
-  "/3d-gym-equipment.jpg",
-  "/gallery2.jpg",
-  "/gallery3.jpg",
-  "/gallery4.jpg",
-  "/gallery5.jpg",
+  "zenx1.jpg",
+  "zenx2.jpg",
+  "zenx3.jpg",
+  "zenx4.jpg",
+  "zenx5.jpg",
+  "zenx6.jpg",
+  "zenx7.jpg",
+  "zenx8.jpg",
+  "zenx9.jpg",
+  "zenx10.jpg",
+  "zenx11.jpg",
+  "zenx12.jpg"
 ];
 
 export default function Gallery() {
@@ -84,8 +91,8 @@ export default function Gallery() {
             <Image
               src={images[selectedIndex]}
               alt="Selected image"
-              width={1000}
-              height={700}
+              width={700}
+              height={400}
               className="object-contain rounded-xl shadow-xl"
             />
           </div>
