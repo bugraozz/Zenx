@@ -1,4 +1,4 @@
-import { BackgroundWatermark } from "@/components/background-watermark"
+
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -8,8 +8,8 @@ import { Footer } from "@/components/footer"
 
 export default function ZenxGymHomePage() {
   return (
-    <div className="min-h-screen bg-background relative overflow-x-hidden">
-      <BackgroundWatermark />
+    <div className="min-h-screen  relative overflow-x-hidden">
+      
       <Navigation />
       <HeroSection />
       <AboutSection />

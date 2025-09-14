@@ -1,21 +1,31 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+import { SignupForm } from "./signup-form"
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { Button } from "./ui/button"
+import { TextHoverEffect } from "./ui/text-hover-effect";
+
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter, X } from "lucide-react"
 
 export function ContactSection() {
+
+  const words = [
+    { text: "BİZE" },
+    { text: "ULAŞIN", className: "text-gray-900/70 dark:text-gray-900/70" },
+  ];
   return (
-    <section id="contact" className="py-20 relative z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
-          <Badge variant="secondary" className="text-black-600 font-semibold px-6 py-3 bg-primary/10 border-primary/20">
-            İletişim
-          </Badge>
-          <h2 className="text-4xl lg:text-6xl font-bold font-sans text-black-400 bg-black bg-clip-text text-transparent">
-            Bize Ulaşın
-          </h2>
-        </div>
+    
+    <section id="contact" className=" relative h-screen overflow-hidden bg-zinc-10 text-black">
+      
+        <div className="absolute inset-0 w-full h-full z-0">
+       
+       
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="text-center space-y-6 mb-8 relative">
+  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight">
+    <TextHoverEffect text="BİZE ULAŞIN" />
+  </h1>
+</div>
 
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="space-y-8">
@@ -55,9 +65,9 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="pt-8">
-              <h3 className="text-2xl font-semibold font-sans mb-6">Sosyal Medya</h3>
-              <div className="flex space-x-4">
+            <div className="pt-8 ">
+             
+              <div className=" flex space-x-6">
                 <Button
                   size="icon"
                   variant="outline"
@@ -85,56 +95,11 @@ export function ContactSection() {
               </div>
             </div>
           </div>
-
-          <Card className="border-0 shadow-2xl bg-card/90 backdrop-blur-sm">
-            <CardHeader className="pb-6">
-              <CardTitle className="text-3xl font-sans">Mesaj Gönder</CardTitle>
-              <CardDescription className="font-serif text-lg">
-                Sorularınız için bize mesaj gönderin, en kısa sürede dönüş yapalım.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <label className="text-sm font-medium font-sans mb-2 block">Ad</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
-                    placeholder="Adınız"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm font-medium font-sans mb-2 block">Soyad</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
-                    placeholder="Soyadınız"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium font-sans mb-2 block">E-posta</label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
-                  placeholder="E-posta adresiniz"
-                />
-              </div>
-              <div>
-                <label className="text-sm font-medium font-sans mb-2 block">Mesaj</label>
-                <textarea
-                  rows={5}
-                  className="w-full px-4 py-3 bg-input border-2 border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-none transition-all duration-300"
-                  placeholder="Mesajınızı yazın..."
-                ></textarea>
-              </div>
-              <Button className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                Mesaj Gönder
-              </Button>
-            </CardContent>
-          </Card>
+          <SignupForm />
         </div>
       </div>
     </section>
   )
 }
+
+
