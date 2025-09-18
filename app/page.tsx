@@ -9,11 +9,11 @@ import { Footer } from "@/components/footer"
 export default function ZenxGymHomePage() {
   return (
     <div className="min-h-screen  relative overflow-x-hidden">
-      
+
       <Navigation />
       <HeroSection />
-      <AboutSection />
       <ServicesSection />
+      <AboutSection />
       <ContactSection />
       <Footer />
     </div>

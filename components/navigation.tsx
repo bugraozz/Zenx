@@ -8,20 +8,20 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="absolute top-0 w-full bg-transparent backdrop-blur-sm  z-50 ">
+    <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-            <Image
-    src="/logo.png" // public klasörüne logo.png koyman lazım
-    alt="Zenx Gym Logo"
-    width={120}
-    height={100}
-    className="rounded-md"
-  />
+          <Image
+            src="/logo.png"
+            alt="Zenx Gym Logo"
+            width={220}
+            height={180}
+            className="rounded-md"
+          />
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-lg">
             <NavLink href="#home">Ana Sayfa</NavLink>
             <NavLink href="#about">Hakkımızda</NavLink>
             <NavLink href="#services">Hizmetler</NavLink>
@@ -43,8 +43,8 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-transparent backdrop-blur-xl  shadow-sm">
-          <div className="px-4 py-4 space-y-4 flex flex-col items-start">
+        <div className="md:hidden bg-black/30 backdrop-blur-xl border-t border-white/10">
+          <div className="px-4 py-6 space-y-4 flex flex-col items-start">
             <NavLink href="#home" onClick={() => setIsOpen(false)}>Ana Sayfa</NavLink>
             <NavLink href="#about" onClick={() => setIsOpen(false)}>Hakkımızda</NavLink>
             <NavLink href="#services" onClick={() => setIsOpen(false)}>Hizmetler</NavLink>
@@ -58,10 +58,40 @@ export function Navigation() {
 }
 
 function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href.startsWith('#')) {
+      e.preventDefault()
+      const targetId = href.substring(1)
+      
+      // Handle home navigation - scroll to top
+      if (targetId === 'home') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      } else {
+        // Handle other section navigation
+        const targetElement = document.getElementById(targetId)
+        
+        if (targetElement) {
+          const navbarHeight = 80
+          const offsetPosition = targetElement.offsetTop - navbarHeight
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
+      }
+    }
+
+    onClick?.()
+  }
+
   return (
     <Link
       href={href}
-      onClick={onClick}
+      onClick={handleClick}
       className="text-white hover:text-white transition-all duration-300 font-medium relative group"
     >
       {children}
@@ -69,7 +99,6 @@ function NavLink({ href, children, onClick }: { href: string; children: React.Re
     </Link>
   )
 }
-
 
 
 

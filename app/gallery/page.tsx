@@ -2,11 +2,10 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, X, ArrowLeft } from "lucide-react";
-import { DraggableCardBody, DraggableCardContainer } from "@/components/ui/draggable-card";
+import { ChevronLeft, ChevronRight, X, ArrowLeft, Camera, Grid3X3 } from "lucide-react";
 
 const images = [
   "zenx1.jpg",
@@ -36,89 +35,130 @@ export default function Gallery() {
     setSelectedIndex(prev => (prev === images.length - 1 ? 0 : (prev as number) + 1));
   };
 
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedIndex(null);
+      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'ArrowRight') handleNext();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedIndex]);
+
   return (
-    <div className="min-h-screen bg-white text-foreground flex flex-col items-center py-16 px-6">
-      <h1 className="text-4xl font-bold mb-12">Galeri</h1>
+    <div className="min-h-screen bg-zinc-900 text-white relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(168,85,247,0.1),transparent_50%)]"></div>
 
-      <div className="absolute top-6 left-6 z-50">
-        <Link
-          href="/"
-          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-background/80 backdrop-primary-md border border-border/50 shadow-lg hover:bg-primary/50 transition-all duration-300"
-        >
-          <ArrowLeft className="w-5 h-5 text-foreground" />
-          Ana Sayfa
-        </Link>
-      </div>
-
-      {/* Draggable Card Grid */}
-      <DraggableCardContainer className="relative my-10 flex min-h-screen w-full justify-center overflow-clip">
-        <div className="grid w-full max-w-6xl grid-cols-1 items-center justify-center gap-10 md:grid-cols-3">
-          {images.map((src, idx) => (
-            <Container key={idx} onClick={() => setSelectedIndex(idx)}>
-              <DraggableCardBody>
-                <Image
-                  src={src}
-                  alt={`Gallery image ${idx + 1}`}
-                  width={400}
-                  height={300}
-                  className="pointer-events-none relative z-10 h-80 w-full object-cover  "
-                />
-                <p className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-                  Image {idx + 1}
-                </p>
-              </DraggableCardBody>
-            </Container>
-          ))}
-        </div>
-      </DraggableCardContainer>
-
-      {/* Lightbox */}
-      {selectedIndex !== null && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
-          <button
-            className="absolute top-6 right-6 text-red-600 hover:text-red-800 transition-colors duration-300"
-            onClick={() => setSelectedIndex(null)}
-          >
-            <X size={32} />
-          </button>
-
-          <button className="absolute left-6 text-white hover:text-gray-600 transition-colors duration-300" onClick={handlePrev}>
-            <ChevronLeft size={48} />
-          </button>
-
-          <div className="max-w-4xl max-h-[80vh] flex items-center justify-center">
-            <Image
-              src={images[selectedIndex]}
-              alt="Selected image"
-              width={700}
-              height={400}
-              className="object-contain rounded-xl shadow-xl"
-            />
+      <div className="relative z-10 min-h-screen flex flex-col">
+        {/* Header Section */}
+        <div className="pt-20 pb-12 px-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Camera className="w-20 h-20 text-zinc-400 mr-3" />
+            </div>
           </div>
-
-          <button className="absolute right-6 text-white hover:text-gray-600 transition-colors duration-300" onClick={handleNext}>
-            <ChevronRight size={48} />
-          </button>
         </div>
-      )}
+
+        {/* Back to Home Button */}
+        <div className="absolute top-6 left-6 z-50">
+          <Link
+            href="/"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 shadow-lg hover:bg-zinc-700/70 transition-all duration-300 hover:scale-105"
+          >
+            <ArrowLeft className="w-5 h-5 text-white" />
+            <span className="text-white font-[var(--font-manrope)]">Ana Sayfa</span>
+          </Link>
+        </div>
+
+        {/* Gallery Grid */}
+        <div className="flex-1 px-6 pb-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {images.map((src, idx) => (
+                <div
+                  key={idx}
+                  className="group relative cursor-pointer overflow-hidden rounded-xl bg-zinc-800/30 backdrop-blur-sm border border-zinc-700/30 hover:border-zinc-600/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                  onClick={() => setSelectedIndex(idx)}
+                >
+                  <div className="aspect-square relative overflow-hidden">
+                    <Image
+                      src={`/${src}`}
+                      alt={`ZENX GYM Gallery ${idx + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    {/* Overlay Content */}
+                    <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2">
+                          <Grid3X3 className="w-4 h-4 text-white" />
+                        </div>
+                        <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                          <Camera className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Lightbox */}
+        {selectedIndex !== null && (
+          <div className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            {/* Close Button */}
+            <button
+              type="button"
+              aria-label="Close lightbox"
+              className="absolute top-6 right-6 w-12 h-12 bg-zinc-800/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-all duration-300 hover:scale-110 z-60 pointer-events-auto"
+              onClick={() => setSelectedIndex(null)}
+            >
+              <X size={24} />
+            </button>
+
+            {/* Navigation Buttons */}
+            <button
+              type="button"
+              aria-label="Previous image"
+              className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-zinc-800/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-all duration-300 hover:scale-110 z-60 pointer-events-auto"
+              onClick={handlePrev}
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <button
+              type="button"
+              aria-label="Next image"
+              className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-zinc-800/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-all duration-300 hover:scale-110 z-60 pointer-events-auto"
+              onClick={handleNext}
+            >
+              <ChevronRight size={24} />
+            </button>
+
+            {/* Main Image */}
+            <div className="relative w-full flex items-center justify-center">
+              <div className="max-w-[calc(100vw-120px)] max-h-[calc(100vh-120px)] w-auto h-auto">
+                <Image
+                  src={`/${images[selectedIndex]}`}
+                  alt={`ZENX GYM Gallery ${selectedIndex + 1}`}
+                  width={1200}
+                  height={800}
+                  className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
-
-// Container component tıklanabilir ve TypeScript uyumlu
-const Container = ({
-  children,
-  onClick,
-}: {
-  children: React.ReactNode;
-  onClick?: () => void;
-}) => {
-  return (
-    <div
-      className="relative flex items-center justify-center rounded-lg bg-gray-200 dark:bg-neutral-800 cursor-pointer"
-      onClick={onClick}
-    >
-      {children}
-    </div>
-  );
-};

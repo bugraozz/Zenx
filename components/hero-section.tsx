@@ -53,7 +53,7 @@ export function HeroSection() {
         {/* Görsel ile başlık */}
         <div className="relative w-[400px] h-[200px] md:w-[600px] md:h-[200px]">
           <Image
-            src="/logo.png" // kendi görsel yolun
+            src="/logo.png"
             alt="ZENX GYM | LIFE CLUB"
             fill
             className="object-contain"
