@@ -78,13 +78,13 @@ export function AboutSection() {
 
           <WobbleCard containerClassName="col-span-1 min-h-[550px] bg-gray-900/70">
             <h2 className="max-w-80 text-left text-base md:text-xl lg:text-3xl  tracking-[-0.015em] text-white font-[var(--font-manrope)]">
-              Topluluk Desteği
+              Premium Tesis Hizmetleri
             </h2>
             <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200 font-[var(--font-manrope)]">
-              Motivasyon dolu bir ortamda hedeflerinize ulaşın ve yeni arkadaşlar edinin.
+              "Hedefinize uygun, kişisel antrenman programları.
             </p>
             <img
-              src="/zenx12.jpg"
+              src="/zenx7.jpg"
               width={320}
               height={400}
               alt="Community support"
