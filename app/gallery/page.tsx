@@ -5,6 +5,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BackgroundText } from "@/components/BackgroundText"
 import { ChevronLeft, ChevronRight, X, ArrowLeft, Camera, Grid3X3 } from "lucide-react";
 
 const images = [
@@ -49,7 +50,7 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-
+      
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header Section */}
         <div className="pt-20 pb-12 px-6">

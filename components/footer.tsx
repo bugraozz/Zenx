@@ -26,13 +26,13 @@ export function Footer() {
 
             {/* Social Media Links */}
             <div className="flex space-x-4">
-              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-zinc-400 hover:bg-zinc-700 hover:text-white transition-all duration-300 hover:scale-110">
+              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700  transition-all duration-300 hover:scale-110">
                 <Instagram className="w-5 h-5" />
               </button>
-              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-zinc-400 hover:bg-zinc-700 hover:text-white transition-all duration-300 hover:scale-110">
+              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700  transition-all duration-300 hover:scale-110">
                 <Facebook className="w-5 h-5" />
               </button>
-              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-zinc-400 hover:bg-zinc-700 hover:text-white transition-all duration-300 hover:scale-110">
+              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-all duration-300 hover:scale-110">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -90,7 +90,7 @@ export function Footer() {
         <div className="relative mt-16 pt-8 border-t border-zinc-800">
           {/* Gradient Lines */}
           <div className="absolute inset-x-0 top-0 flex justify-center">
-            <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-zinc-600 to-transparent"></div>
+            <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -98,17 +98,7 @@ export function Footer() {
               © 2024 ZENX GYM Life Club. Tüm hakları saklıdır.
             </p>
 
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-zinc-400 transition-colors duration-300 font-[var(--font-manrope)]">
-                Gizlilik Politikası
-              </a>
-              <a href="#" className="text-gray-400 hover:text-zinc-400 transition-colors duration-300 font-[var(--font-manrope)]">
-                Kullanım Koşulları
-              </a>
-              <a href="#" className="text-gray-400 hover:text-zinc-400 transition-colors duration-300 font-[var(--font-manrope)]">
-                Çerez Politikası
-              </a>
-            </div>
+          
           </div>
         </div>
       </div>
