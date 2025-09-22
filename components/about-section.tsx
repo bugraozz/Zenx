@@ -1,28 +1,25 @@
 "use client";
 
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { WobbleCard } from "./ui/wobble-card";
 
 const description = `Zenx Gym, modern ekipmanlar, uzman antrenörler ve motive edici bir topluluk ile fitness hedeflerinize ulaşmanızı sağlar.`;
 
 export function AboutSection() {
-  const words = [
-    { text: "NEDEN", className: "text-white text-2xl sm:text-4xl 2xl:text-6xl font-[var(--font-manrope)]" },
-    { text: "ZENX", className: "text-gray-400 text-2xl sm:text-4xl 2xl:text-6xl font-bold font-[var(--font-manrope)]" },
-    { text: "GYM", className: "text-gray-400 font-bold text-2xl sm:text-4xl 2xl:text-6xl font-[var(--font-manrope)]" },
-    { text: "?", className: "text-white text-2xl sm:text-4xl 2xl:text-6xl font-[var(--font-manrope)]" },
-  ];
+ 
 
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-zinc-900 text-white"
+      className="relative overflow-hidden bg-black text-white"
     >
       {/* İçerik */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="text-center space-y-6 mb-16 text-white">
-          <TypewriterEffectSmooth className="text-white" words={words} />
+          <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 font-[var(--font-lora)]">
+            NEDEN ZENX GYM?
+          </h1>
           <div className="text-white">
             <TextGenerateEffect description={description} className="text-white" />
           </div>

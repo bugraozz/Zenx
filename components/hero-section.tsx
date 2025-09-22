@@ -56,12 +56,12 @@ export function HeroSection() {
             src="/logo.png"
             alt="ZENX GYM | LIFE CLUB"
             fill
-            className="object-contain"
+            className="invert object-contain "
           />
         </div>
 
         {/* Alt başlık */}
-        <div className="font-extralight text-base md:text-4xl  text-black py-4 text-center">
+        <div className="font-extralight text-base md:text-4xl  text-white py-4 text-center">
           ENERJİNİN VE GÜCÜNÜN KAYNAĞI
         </div>
       </motion.div>

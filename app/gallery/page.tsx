@@ -48,18 +48,14 @@ export default function Gallery() {
   }, [selectedIndex]);
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(168,85,247,0.1),transparent_50%)]"></div>
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header Section */}
         <div className="pt-20 pb-12 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <div className="flex items-center justify-center mb-6">
-              <Camera className="w-20 h-20 text-zinc-400 mr-3" />
+              <Camera className="w-20 h-20 text-white mr-3" />
             </div>
           </div>
         </div>

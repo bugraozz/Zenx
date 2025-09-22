@@ -8,16 +8,16 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 border-b border-white/10">
+    <nav className="fixed top-0 w-full bg-black/25 backdrop-blur-md z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Image
             src="/logo.png"
             alt="Zenx Gym Logo"
-            width={220}
-            height={180}
-            className="rounded-md"
+            width={200}
+            height={150}
+            className="rounded-md invert"
           />
 
           {/* Desktop Menu */}

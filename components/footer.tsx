@@ -8,12 +8,7 @@ import { Instagram, Facebook, X, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative bg-zinc-900 text-white overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-
+    <footer className="relative bg-black text-white overflow-hidden">
       <div className="relative z-10 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
@@ -87,20 +82,7 @@ export function Footer() {
               <li className="text-gray-300 font-[var(--font-manrope)]">Pazar: 08:00 - 22:00</li>
             </ul>
 
-            {/* Newsletter Signup */}
-            <div>
-              <h5 className="text-sm font-[var(--font-manrope)] mb-3 text-white">Bültenimize Abone Olun</h5>
-              <div className="flex space-x-2">
-                <Input
-                  type="email"
-                  placeholder="E-posta adresiniz"
-                  className="bg-zinc-800/50 border-zinc-700 text-white placeholder-gray-400 focus:border-zinc-400 font-[var(--font-manrope)] text-sm"
-                />
-                <Button className="bg-zinc-700 hover:bg-zinc-600 text-white border-zinc-600 font-[var(--font-manrope)] px-4">
-                  Abone Ol
-                </Button>
-              </div>
-            </div>
+           
           </div>
         </div>
 
