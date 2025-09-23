@@ -36,7 +36,7 @@ export default function Gallery() {
     setSelectedIndex(prev => (prev === images.length - 1 ? 0 : (prev as number) + 1));
   };
 
-  // Keyboard navigation for lightbox
+  
   useEffect(() => {
     if (selectedIndex === null) return;
     const onKey = (e: KeyboardEvent) => {
@@ -49,9 +49,13 @@ export default function Gallery() {
   }, [selectedIndex]);
 
   return (
+    
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      
+      <BackgroundText text="LIFE" size="text-[60rem]" className="top-0/4 right-0/4" />
+      <BackgroundText text="CLUB" size="text-[50rem]" className="top-1/4 right-0/4" />
+
       <div className="relative z-10 min-h-screen flex flex-col">
+        
         {/* Header Section */}
         <div className="pt-20 pb-12 px-6">
           <div className="max-w-7xl mx-auto text-center">
@@ -61,7 +65,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        {/* Back to Home Button */}
+        
         <div className="absolute top-6 left-6 z-50">
           <Link
             href="/"

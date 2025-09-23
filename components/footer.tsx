@@ -1,16 +1,12 @@
 
-
-
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Instagram, Facebook, X, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Mail,  MapPin } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="relative bg-black text-white overflow-hidden">
       <div className="relative z-10 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Section */}
           <div className="space-y-6">
             <Image
@@ -26,16 +22,15 @@ export function Footer() {
 
             {/* Social Media Links */}
             <div className="flex space-x-4">
-              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700  transition-all duration-300 hover:scale-110">
-                <Instagram className="w-5 h-5" />
-              </button>
-              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700  transition-all duration-300 hover:scale-110">
-                <Facebook className="w-5 h-5" />
-              </button>
-              <button className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-all duration-300 hover:scale-110">
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+                <a
+                  href="https://www.instagram.com/zenx.gym/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-zinc-800/50 rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-all duration-300 hover:scale-110"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+          </div>
           </div>
 
           {/* Quick Links */}
@@ -57,32 +52,35 @@ export function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-zinc-400 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-300 font-[var(--font-manrope)]">
-                  Atatürk Mahallesi<br />
-                  Fitness Sokak No:123<br />
-                  Şişli, İstanbul
+                  Eğri Köprü Mahallesi<br />
+                  Yüksel Yancı Caddesi 16A<br />
+                  Merkez, Sivas
                 </span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-zinc-400 flex-shrink-0" />
-                <span className="text-gray-300 font-[var(--font-manrope)]">+90 212 555 0123</span>
-              </li>
+              
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-zinc-400 flex-shrink-0" />
-                <span className="text-gray-300 font-[var(--font-manrope)]">info@zenxgym.com</span>
+                <span className="text-gray-300 font-[var(--font-manrope)]">zenxgyminfo@gmail.com</span>
               </li>
             </ul>
           </div>
 
-          {/* Working Hours & Newsletter */}
+          
           <div>
             <h4 className="text-lg font-[var(--font-manrope)] mb-6 text-white">Çalışma Saatleri</h4>
             <ul className="space-y-3 text-sm mb-8">
-              <li className="text-gray-300 font-[var(--font-manrope)]">Pazartesi - Cuma: 06:00 - 24:00</li>
-              <li className="text-gray-300 font-[var(--font-manrope)]">Cumartesi: 07:00 - 23:00</li>
-              <li className="text-gray-300 font-[var(--font-manrope)]">Pazar: 08:00 - 22:00</li>
+              <li className="text-gray-300 font-[var(--font-manrope)]">Pazartesi - Cumartesi: 07:00 - 23:00</li>
+              <li className="text-gray-300 font-[var(--font-manrope)]">Pazar: 12:00 - 18:00</li>
             </ul>
+          </div>
 
-           
+          <div>
+            <h4 className="text-lg font-[var(--font-manrope)] mb-6 text-white">Kadınlara özel saatler</h4>
+            <ul className="space-y-3 text-sm mb-8">
+              <li className="text-gray-300 font-[var(--font-manrope)]">Salı: 09:00 - 12:00</li>
+              <li className="text-gray-300 font-[var(--font-manrope)]">Perşembe: 09:00 - 12:00</li>
+              <li className="text-gray-300 font-[var(--font-manrope)]">Cumartesi: 09:00 - 12:00</li>
+            </ul>
           </div>
         </div>
 

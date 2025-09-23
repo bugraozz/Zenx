@@ -48,11 +48,11 @@ export function Navigation() {
 {isOpen && (
   <div className="md:hidden absolute top-full left-0 w-full bg-black/40  border-t border-white/10 z-40">
     <div className="px-4 py-6 flex flex-col space-y-4 items-end">
-      <NavLink href="#home" onClick={() => setIsOpen(false)}>Ana Sayfa</NavLink>
-      <NavLink href="#about" onClick={() => setIsOpen(false)}>Hakkımızda</NavLink>
-      <NavLink href="#services" onClick={() => setIsOpen(false)}>Hizmetler</NavLink>
+      <NavLink href="/#home" onClick={() => setIsOpen(false)}>Ana Sayfa</NavLink>
+      <NavLink href="/#about" onClick={() => setIsOpen(false)}>Hakkımızda</NavLink>
+      <NavLink href="/#services" onClick={() => setIsOpen(false)}>Hizmetler</NavLink>
       <NavLink href="/gallery" onClick={() => setIsOpen(false)}>Galeri</NavLink>
-      <NavLink href="#contact" onClick={() => setIsOpen(false)}>İletişim</NavLink>
+      <NavLink href="/#contact" onClick={() => setIsOpen(false)}>İletişim</NavLink>
     </div>
   </div>
 )}
@@ -68,7 +68,7 @@ function NavLink({ href, children, onClick }: { href: string; children: React.Re
       e.preventDefault()
       const targetId = href.substring(1)
 
-      // Handle home navigation - scroll to top
+      
       if (targetId === 'home') {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else {

@@ -28,7 +28,7 @@
 
 /* From Uiverse.io by Spacious74 */ 
 .outer {
-  width: 300px;
+  width: 350px;
   height: 250px;
   border-radius: 10px;
   padding: 1px;
@@ -46,7 +46,7 @@
   z-index: 2;
   right: 10%;
   top: 10%;
-  animation: moveDot 6s linear infinite;
+  animation: moveDot 9s linear infinite;
 }
 
 @keyframes moveDot {
@@ -85,8 +85,8 @@
   color: #fff;
 }
 .ray {
-  width: 220px;
-  height: 45px;
+  width: 210px;
+  height: 65px;
   border-radius: 100px;
   position: absolute;
   background-color: #c7c7c7;

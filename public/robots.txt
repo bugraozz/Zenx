@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.zenxgym.com
+
+# Sitemaps
+Sitemap: https://www.zenxgym.com/sitemap.xml

@@ -22,15 +22,33 @@ const lora = Lora({
   variable: "--font-lora",
 })
 
-// Metadata: title ve description
 export const metadata: Metadata = {
   title: "ZENX GYM - Life Club | Premium Fitness Experience",
   description:
     "ZENX GYM Life Club - Modern spor salonu deneyimi. Premium ekipmanlar, uzman antrenörler ve motivasyonel ortam.",
+  keywords: ["spor salonu", "fitness", "gym", "personal training", "ZENX GYM"],
   generator: "v0.app",
-}
+  authors: [{ name: "ZENX Team", url: "https://www.zenxgym.com" }],
+  openGraph: {
+    title: "ZENX GYM - Life Club",
+    description:
+      "Modern spor salonu deneyimi. Premium ekipmanlar, uzman antrenörler ve motivasyonel ortam.",
+    url: "https://www.zenxgym.com",
+    siteName: "ZENX GYM",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ZENX GYM Life Club",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  }
+};
 
-// RootLayout: tüm siteyi kapsar
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -40,9 +58,9 @@ export default function RootLayout({
       className={`${geist.variable} ${manrope.variable} ${lora.variable} antialiased`}
     >
       <head>
-        {/* Mobil uyumluluk */}
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Favicon veya diğer head etiketlerini buraya ekleyebilirsin */}
+        <link rel="icon" href="/zicon.ico" />
       </head>
       <body>{children}</body>
     </html>

@@ -3,10 +3,10 @@ import React from "react";
 
 interface BackgroundTextProps {
   text: string;
-  size?: string; // Tailwind text size örn: "text-[20rem]"
-  color?: string; // Stroke rengi
-  opacity?: number; // 0-100 arası
-  className?: string; // ekstra Tailwind sınıfları
+  size?: string; 
+  color?: string; 
+  opacity?: number; 
+  className?: string; 
 }
 
 export function BackgroundText({
