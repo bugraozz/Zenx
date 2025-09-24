@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -79,8 +78,13 @@ export function ContactSection() {
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Çalışma Saatleri",
+      title: "Genel Çalışma Saatleri",
       details: ["Pazartesi - Cuma: 06:00 - 24:00", "Cumartesi - Pazar: 08:00 - 22:00"]
+    },
+      {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Kadınlara Özel Çalışma Saatleri",
+      details: ["Salı: 09:00 - 12:00","Cumartesi: 09:00 - 12:00","Perşembe: 09:00 - 12:00"]
     }
   ];
 
@@ -99,32 +103,39 @@ export function ContactSection() {
       )}
 
       {/* Contact Başlık */}
-      <section className="py-20 px-4 scroll-mt-20" id="contact"> 
-        <BackgroundText text="ZENX" size="text-[35rem]" className="top-0/2" />
-        <BackgroundText text="GYM" size="text-[35rem]" className="top-1/2" />
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-lora)] mb-6">
-            BİZİMLE İLETİŞİME GEÇİN
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-[var(--font-manrope)]">
-            Sorularınız için bizimle iletişime geçin. Size en iyi hizmeti sunmak için buradayız.
-          </p>
-        </div>
-      </section>
-
-      {/* İletişim Bilgileri */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="container mx-auto max-w-5xl"> {/* max-w-5xl eklendi, daha toplu durması için */}
+          {/* 1. DEĞİŞİKLİK: Grid yapısı 2 sütuna ayarlandı */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 justify-items-center">
             {contactInfo.map((info, index) => (
-              <div key={index} className="outer relative flex flex-col items-center">
+              <div 
+                key={index} 
+                // 2. DEĞİŞİKLİK: Özel konumlandırma kuralı kaldırıldı
+                className="outer relative flex flex-col items-center w-full max-w-sm"
+              >
                 <div className="dot"></div>
-                <div className="card relative flex flex-col items-center justify-center text-white p-6">
+                <div 
+                  className={`card relative flex flex-col items-center text-white p-6 w-full h-full ${
+                    ['Adres', 'E-posta'].includes(info.title) ? '' : 'justify-center'
+                  }`}
+                >
                   <div className="ray"></div>
-                  <div className="text text-2xl font-bold">{info.title}</div>
-                  <div className="mt-2 space-y-1">
+                  <div className="text text-2xl font-bold text-center">{info.title}</div>
+                  <div className="mt-4 space-y-2 text-center">
                     {info.details.map((detail, dIndex) => (
-                      <p key={dIndex} className="text-gray-300 text-sm">{detail}</p>
+                      info.title === 'E-posta' ? (
+                        <a 
+                          key={dIndex} 
+                          href={`mailto:${detail}`} 
+                          className="text-white font-medium text-base tracking-wider hover:text-gray-300 transition-colors"
+                        >
+                          {detail}
+                        </a>
+                      ) : (
+                        <p key={dIndex} className="text-gray-200 font-medium text-base">
+                          {detail}
+                        </p>
+                      )
                     ))}
                   </div>
                   <div className="line topl"></div>
@@ -145,7 +156,7 @@ export function ContactSection() {
             
             {/* Form */}
             <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 p-8">
-              <h2 className="text-3xl font-[var(--font-manrope)] text-white mb-8">Bize Yazın</h2>
+              <h2 className="text-3xl font-[var(--font-manrope)] text-white mb-8">Bizimle İletişime Geçin</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -212,7 +223,7 @@ export function ContactSection() {
             </Card>
 
             {/* Harita */}
-            <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 overflow-hidden">
+            <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 p-8 pt-30">
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-white mx-auto mb-8" />
                 <h3 className="text-2xl font-[var(--font-manrope)] mb-2 text-white">Lokasyonumuz</h3>

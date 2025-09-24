@@ -8,11 +8,21 @@ import Image from "next/image"
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Animasyonlu kaydırma için
+    });
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-black/25 backdrop-blur-md z-50 border-b border-white/10">
       
       {/* Logo tam sol kenarda */}
-      <div className="absolute left-10 top-1/2 transform -translate-y-1/2 pl-4">
+      <div 
+        className="absolute left-10 top-1/2 transform -translate-y-1/2 pl-4 cursor-pointer"
+        onClick={scrollToTop}
+      >
         <Image
           src="/logo.png"
           alt="Zenx Gym Logo"
@@ -21,6 +31,7 @@ export function Navigation() {
           className="rounded-md invert"
         />
       </div>
+
 
       {/* Nav öğeleri container içinde, ortalı */}
       <div className="max-w-7xl mx-auto flex items-center justify-center h-20 space-x-6 text-lg">

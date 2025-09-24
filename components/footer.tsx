@@ -75,7 +75,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-[var(--font-manrope)] mb-6 text-white">Kadınlara özel saatler</h4>
+            <h4 className="text-lg font-[var(--font-manrope)] mb-6 text-white">Kadınlara Özel Saatler</h4>
             <ul className="space-y-3 text-sm mb-8">
               <li className="text-gray-300 font-[var(--font-manrope)]">Salı: 09:00 - 12:00</li>
               <li className="text-gray-300 font-[var(--font-manrope)]">Perşembe: 09:00 - 12:00</li>

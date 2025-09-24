@@ -1,6 +1,3 @@
-
-
-
 "use client"
 import { useRef, useState } from "react"
 import { BackgroundText } from "./BackgroundText"
@@ -41,10 +38,7 @@ export function ServicesSection() {
               muted
               controls
               className="w-full h-[500px] object-cover"
-            />
-          
-
-            
+            />           
           </div>
         </div>
       </div>
