@@ -90,7 +90,8 @@ export function ContactSection() {
 
   return (
     <div className="relative min-h-screen bg-black text-white pt-60 ">  
-
+      <BackgroundText text="ZENX" size="text-[45rem]" className="top-0/2"  />
+      <BackgroundText text="GYM" size="text-[45rem]" className="top-1/2"  />
       {/* Toast Bildirim */}
       {notification && (
         <div
@@ -104,13 +105,12 @@ export function ContactSection() {
 
       {/* Contact Başlık */}
       <section className="py-20 px-4">
-        <div className="container mx-auto max-w-5xl"> {/* max-w-5xl eklendi, daha toplu durması için */}
-          {/* 1. DEĞİŞİKLİK: Grid yapısı 2 sütuna ayarlandı */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 justify-items-center">
+        <div className="container mx-auto max-w-9xl"> 
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 justify-items-center">
             {contactInfo.map((info, index) => (
               <div 
                 key={index} 
-                // 2. DEĞİŞİKLİK: Özel konumlandırma kuralı kaldırıldı
                 className="outer relative flex flex-col items-center w-full max-w-sm"
               >
                 <div className="dot"></div>

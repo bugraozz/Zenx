@@ -28,7 +28,7 @@ export function AboutSection() {
         </div>
 
         <div className="grid md:grid-cols-4 gap-8">
-          <WobbleCard containerClassName="col-span-1 min-h-[550px] bg-gray-900/70 flex flex-col justify-start">
+          <WobbleCard containerClassName="col-span-1 min-h-[570px] bg-gray-900/70 flex flex-col justify-start">
             <h2 className="max-w-80 text-left text-base md:text-xl lg:text-3xl tracking-[-0.015em] text-white font-[var(--font-manrope)]">
               Modern Ekipmanlar
             </h2>
@@ -44,7 +44,7 @@ export function AboutSection() {
             />
           </WobbleCard>
 
-          <WobbleCard containerClassName="col-span-1 min-h-[550px] bg-gray-900/70">
+          <WobbleCard containerClassName="col-span-1 min-h-[570px] bg-gray-900/70">
             <h2 className="max-w-80 text-left text-base md:text-xl lg:text-3xl tracking-[-0.015em] text-white font-[var(--font-manrope)]">
               Uzman Antrenörler
             </h2>

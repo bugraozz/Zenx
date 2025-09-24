@@ -147,15 +147,16 @@ export default function Gallery() {
 
             {/* Main Image */}
             <div className="relative w-full flex items-center justify-center">
-              <div className="max-w-[calc(100vw-120px)] max-h-[calc(100vh-120px)] w-auto h-auto">
-                <Image
-                  src={`/${images[selectedIndex]}`}
-                  alt={`ZENX GYM Gallery ${selectedIndex + 1}`}
-                  width={1200}
-                  height={800}
-                  className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-2xl"
-                />
-              </div>
+             <div className="relative w-[90vw] h-[80vh] flex items-center justify-center">
+  <Image
+    src={`/${images[selectedIndex]}`}
+    alt={`ZENX GYM Gallery ${selectedIndex + 1}`}
+    fill
+    className="object-contain rounded-xl shadow-2xl"
+  />
+</div>
+
+
             </div>
           </div>
         )}
