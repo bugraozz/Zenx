@@ -7,7 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "postbuild": "next-sitemap --config next-sitemap.config.ts"
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

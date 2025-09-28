@@ -1,6 +1,5 @@
-import type { IConfig } from "next-sitemap";
-
-const config: IConfig = {
+/** @type {import('next-sitemap').IConfig} */
+const config = {
   siteUrl: "https://www.zenxgym.com",
   generateRobotsTxt: true,
   sitemapSize: 5000,
@@ -10,7 +9,7 @@ const config: IConfig = {
     policies: [
       { userAgent: "*", allow: "/" }, // tüm botlara izin
     ],
-  }
+  },
 };
 
-export default config;
+module.exports = config;
