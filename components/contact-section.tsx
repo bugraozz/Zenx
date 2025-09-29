@@ -104,9 +104,14 @@ export function ContactSection() {
       )}
 
       {/* Contact Başlık */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"
+       id="contact">
         <div className="container mx-auto max-w-9xl"> 
-          
+          <div className="text-center pt-4 pb-18 z-10">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-lora)] mb-6">
+          İLETİŞİM
+        </h1>
+      </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12 justify-items-center">
             {contactInfo.map((info, index) => (
               <div 
