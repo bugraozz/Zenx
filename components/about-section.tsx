@@ -37,8 +37,8 @@ export function AboutSection() {
             </p>
             <img
               src="/zenx1.jpg"
-              width={300}
-              height={400}
+              width={500}
+              height={500}
               alt="Modern gym equipment"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
@@ -53,8 +53,8 @@ export function AboutSection() {
             </p>
             <img
               src="/zenx4.jpg"
-              width={300}
-              height={400}
+              width={500}
+              height={500}
               alt="Expert trainers"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
@@ -69,8 +69,8 @@ export function AboutSection() {
             </p>
             <img
               src="/zenx12.jpg"
-              width={300}
-              height={400}
+              width={500}
+              height={500}
               alt="Community support"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
@@ -85,8 +85,8 @@ export function AboutSection() {
             </p>
             <img
               src="/zenx7.jpg"
-              width={300}
-              height={400}
+              width={500}
+              height={500}
               alt="Community support"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
