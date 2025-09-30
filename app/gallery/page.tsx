@@ -20,7 +20,15 @@ const images = [
   "zenx9.jpg",
   "zenx10.jpg",
   "zenx11.jpg",
-  "zenx12.jpg"
+  "zenx12.jpg",
+  "zenx13.jpg",
+  "zenx14.jpg",
+  "zenx15.jpg",
+  "zenx16.jpg",
+  "zenx17.jpg",
+  "zenx18.jpg",
+  "zenx19.jpg",
+  "zenx20.jpg"
 ];
 
 export default function Gallery() {

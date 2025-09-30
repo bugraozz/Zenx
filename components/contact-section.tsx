@@ -79,7 +79,7 @@ export function ContactSection() {
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Genel Çalışma Saatleri",
-      details: ["Pazartesi - Cuma: 06:00 - 24:00", "Cumartesi - Pazar: 08:00 - 22:00"]
+      details: ["Pazartesi - Cumartesi: 07:00 - 23:00", "Pazar: 12:00 - 18:00"]
     },
       {
       icon: <Clock className="w-6 h-6" />,
