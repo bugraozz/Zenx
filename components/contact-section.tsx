@@ -69,7 +69,7 @@ export function ContactSection() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Adres",
-      details: ["Eğri Köprü Mahallesi", "Yüksel Yancı Caddesi 16A", "Sivas"]
+      details: ["Eğri Köprü Mahallesi", "Yüksel Yancı Caddesi 16A", "Sivas Merkez" ]
     },
     {
       icon: <Mail className="w-6 h-6" />,

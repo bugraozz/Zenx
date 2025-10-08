@@ -150,7 +150,7 @@ export function ServicesSection() {
               ref={videoRef}
               src="/gym_video.mp4"
               className="w-full h-[500px] object-cover object-center cursor-pointer"
-              poster="/zenx9.jpg"
+              
               onClick={togglePlay}
             />
 

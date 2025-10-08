@@ -23,10 +23,9 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: "ZENX GYM - Life Club | Premium Fitness Experience",
-  description:
-    "ZENX GYM Life Club - Modern spor salonu deneyimi. Premium ekipmanlar, uzman antrenörler ve motivasyonel ortam.",
-  keywords: ["spor salonu", "fitness", "gym", "personal training", "ZENX GYM"],
+  title: "ZENX GYM - Sivas Spor Salonu | Premium Fitness Experience",
+  description: "Sivas’taki modern spor salonu ZENX GYM Life Club. Premium ekipmanlar, uzman antrenörler ve motivasyonel ortam.",
+  keywords: ["Sivas spor salonu", "spor salonu", "fitness", "gym", "personal training"],
   generator: "v0.app",
   authors: [{ name: "ZENX Team", url: "https://www.zenxgym.com" }],
   openGraph: {

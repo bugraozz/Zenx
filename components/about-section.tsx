@@ -55,7 +55,7 @@ export function AboutSection() {
               src="/zenx4.jpg"
               width={500}
               height={500}
-              alt="Expert trainers"
+              alt="Sivas ZENX GYM Expert trainers"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>
@@ -71,7 +71,7 @@ export function AboutSection() {
               src="/zenx12.jpg"
               width={500}
               height={500}
-              alt="Community support"
+              alt="Sivas ZENX GYM Community support"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>
@@ -87,7 +87,7 @@ export function AboutSection() {
               src="/zenx7.jpg"
               width={500}
               height={500}
-              alt="Community support"
+              alt="Sivas ZENX GYM Community support"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>

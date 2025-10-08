@@ -11,13 +11,13 @@ export function Footer() {
           <div className="space-y-6">
             <Image
               src="/logo.png"
-              alt="ZENX GYM Logo"
+              alt=" Sivas ZENX GYM Logo"
               width={120}
               height={40}
               className="h-10 w-auto brightness-0 invert"
             />
             <p className="text-sm text-gray-300 leading-relaxed font-[var(--font-manrope)]">
-              Modern fitness anlayışı ile güçlü yaşamın başladığı yer. Profesyonel eğitmenlerimiz ve son teknoloji ekipmanlarımızla hedeflerinize ulaşın.
+                Modern fitness anlayışı ile güçlü yaşamın başladığı yer. Sivas’ta bulunan ZENX GYM Life Club, profesyonel eğitmenlerimiz ve son teknoloji ekipmanlarımızla hedeflerinize ulaşmanıza yardımcı olur.
             </p>
 
             {/* Social Media Links */}
@@ -93,7 +93,7 @@ export function Footer() {
 
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-400 font-[var(--font-manrope)]">
-              © 2024 ZENX GYM Life Club. Tüm hakları saklıdır.
+              © 2025 ZENX GYM Life Club. Tüm hakları saklıdır.
             </p>
 
           
