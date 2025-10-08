@@ -80,12 +80,11 @@ export function ServicesSection() {
       <BackgroundText text="LIFE" size="text-[50rem]" className="top-0/4" />
       <BackgroundText text="CLUB" size="text-[50rem]" className="top-2/4" />
 
-      {/* Başlık */}
+     
       <div className="text-center pt-4 pb-18 z-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-lora)] mb-6">ZENX GYM İLE ÖZEL ÇÖZÜMLER</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-lora)] mb-6">Sivas ZENX GYM İLE ÖZEL ÇÖZÜMLER</h1>
       </div>
-
-      {/* Video Card */}
+     
       <div className="relative z-10 w-full max-w-6xl px-2">
         {/* Metalik Border */}
         <div className="relative rounded-2xl p-[2px] overflow-hidden">
@@ -102,10 +101,6 @@ export function ServicesSection() {
               ref={videoRef}
               src="/gym_video.mp4"
               className="w-full h-[500px] object-cover object-center cursor-pointer"
-<<<<<<< HEAD
-              
-=======
->>>>>>> 65bda272e780389720c5e400b8204cbac8c1717d
               onClick={togglePlay}
             />
 
