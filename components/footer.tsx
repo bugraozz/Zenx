@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { Instagram, Mail,  MapPin } from "lucide-react";
+import { Instagram, Mail,  MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -61,6 +61,11 @@ export function Footer() {
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-zinc-400 flex-shrink-0" />
                 <span className="text-gray-300 font-[var(--font-manrope)]">zenxgyminfo@gmail.com</span>
+              </li>
+
+              <li className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-zinc-400 flex-shrink-0" />
+                <span className="text-gray-300 font-[var(--font-manrope)]">+90 501 553 63 58</span>
               </li>
             </ul>
           </div>

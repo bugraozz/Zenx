@@ -73,8 +73,11 @@ export function ContactSection() {
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "E-posta",
-      details: ["zenxgyminfo@gmail.com"]
+      title: "E-posta,Telefon",
+      details: [
+        "zenxgyminfo@gmail.com",
+        "+90 501 553 63 58"
+      ]
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -245,21 +248,40 @@ export function ContactSection() {
       </section>
 
       {/* Social Media & Quick Actions */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-lg mx-auto">
-            <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 text-center p-6 transition-all duration-300">
-              <h3 className="font-[var(--font-manrope)] text-lg mb-3 text-white">WhatsApp</h3>
-              <p className="text-sm text-white mb-4 font-[var(--font-manrope)]">
-                Hızlı iletişim için WhatsApp'tan bize yazın.
-              </p>
-              <Button className="button">
-                Mesaj Gönder
-              </Button>
-            </Card>
-          </div>
-        </div>
-      </section>
+<section className="py-20 px-4">
+  <div className="container mx-auto">
+    <div className="max-w-lg mx-auto">
+      <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 text-center p-6 transition-all duration-300">
+        <h3 className="font-[var(--font-manrope)] text-lg mb-3 text-white">WhatsApp</h3>
+        <p className="text-sm text-white mb-4 font-[var(--font-manrope)]">
+          Hızlı iletişim için WhatsApp'tan bize yazın.
+        </p>
+
+        <Button
+          className="button"
+          onClick={() => {
+            const phone = "905015536358"; // <-- Kendi numaranı yaz (ülke kodu dahil, + veya 0 olmadan)
+            const message = "Merhaba, web sitenizden ulaşıyorum!"; // <-- İstersen değiştir
+
+            const encoded = encodeURIComponent(message);
+            const isMobile = /Mobil|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+            // Mobil cihazlarda doğrudan WhatsApp uygulamasına, diğerlerinde WhatsApp Web'e yönlendirir
+            const url = isMobile
+              ? `whatsapp://send?phone=${phone}&text=${encoded}`
+              : `https://wa.me/${phone}?text=${encoded}`;
+
+            // Uygulamayı veya web'i yeni sekmede aç
+            window.open(url, "_blank", "noopener,noreferrer");
+          }}
+        >
+          Mesaj Gönder
+        </Button>
+      </Card>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
