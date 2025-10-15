@@ -87,7 +87,7 @@ export function ContactSection() {
       {
       icon: <Clock className="w-6 h-6" />,
       title: "Kadınlara Özel Çalışma Saatleri",
-      details: ["Salı: 09:00 - 12:00","Cumartesi: 09:00 - 12:00","Perşembe: 09:00 - 12:00"]
+      details: ["Salı: 09:00 - 12:00","Perşembe: 09:00 - 12:00","Cumartesi: 09:00 - 12:00"]
     }
   ];
 
