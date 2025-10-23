@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Manrope, Lora } from "next/font/google"
 import "./globals.css"
 
-// Google fontlarını tanımla
+
 const geist = Geist({
   subsets: ["latin"],
   display: "swap",
@@ -44,7 +44,15 @@ export const metadata: Metadata = {
     ],
     locale: "tr_TR",
     type: "website",
-  }
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 
@@ -57,7 +65,6 @@ export default function RootLayout({
       className={`${geist.variable} ${manrope.variable} ${lora.variable} antialiased`}
     >
       <head>
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/zicon.ico" />
       </head>
