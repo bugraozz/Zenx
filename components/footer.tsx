@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-6">
             <Image
               src="/logo.png"
-              alt=" Sivas ZENX GYM Logo"
+              alt=" Sivas Spor Salonu ZENX GYM Logo"
               width={120}
               height={40}
               className="h-10 w-auto brightness-0 invert"
