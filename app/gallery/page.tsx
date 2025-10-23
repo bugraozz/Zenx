@@ -97,7 +97,7 @@ export default function Gallery() {
                   <div className="aspect-square relative overflow-hidden">
                     <Image
                       src={`/${src}`}
-                      alt={`Sivas ZENX GYM Gallery ${idx + 1}`}
+                      alt={`Sivas Spor Salonu ZENX GYM Gallery ${idx + 1}`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -158,7 +158,7 @@ export default function Gallery() {
              <div className="relative w-[90vw] h-[80vh] flex items-center justify-center">
   <Image
     src={`/${images[selectedIndex]}`}
-    alt={`Sivas ZENX GYM Gallery ${selectedIndex + 1}`}
+    alt={`Sivas Spor Salonu ZENX GYM Gallery ${selectedIndex + 1}`}
     fill
     className="object-contain rounded-xl shadow-2xl"
   />
