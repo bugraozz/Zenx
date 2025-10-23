@@ -39,7 +39,7 @@ export function AboutSection() {
               src="/zenx1.jpg"
               width={500}
               height={500}
-              alt="Modern gym equipment"
+              alt="Sivas'ta modern fitness ekipmanları"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>
@@ -55,7 +55,7 @@ export function AboutSection() {
               src="/zenx4.jpg"
               width={500}
               height={500}
-              alt="Sivas Spor Salonu ZENX GYM Expert trainers"
+              alt="Sivas Spor Salonu ZENX GYM Uzman Eğitmenler"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>
@@ -71,7 +71,7 @@ export function AboutSection() {
               src="/zenx12.jpg"
               width={500}
               height={500}
-              alt="Sivas Spor Salonu ZENX GYM Community support"
+              alt="Sivas Spor Salonu ZENX GYM Topluluk Desteği"
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>
@@ -87,7 +87,7 @@ export function AboutSection() {
               src="/zenx7.jpg"
               width={500}
               height={500}
-              alt="Sivas Spor Salaonu ZENX GYM Community support"
+              alt="Sivas Spor Salaonu ZENX GYM "
               className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-50 object-contain rounded-xl"
             />
           </WobbleCard>
